@@ -1,0 +1,71 @@
+<div class="toolbar">
+  <mat-toolbar color="primary">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    <span style="margin-left: 10px">My Calculator</span>
+  </mat-toolbar>
+</div>
+
+
+<div ng-app="Calc">
+  <div ng-controller="MainCtrl" class="container">
+    <div></div>
+      <div id="calcShell" >
+        <div id="calcScreen">
+          <input type="text" name="Input" id="calcText" [value]="displayValue">
+        </div>
+          
+        <div id="button-row">
+          <button type="button" id="C" class="btn clearbtn" (click)="clear()">C</button>
+          <button type="button" id="CA" class="btn clearbtn" (click)="clearAll()">CA</button>
+
+          <button type="button" id="/" class="btn1" (click)="addOperator('/')">&divide;</button>
+          <button type="button" id="*" class="btn1" (click)="addOperator('*')">&times;</button>
+
+          <button type="button" id="7" class="btn" (click)="addNumber(7)">7</button>
+          <button type="button" id="8" class="btn" (click)="addNumber(8)">8</button>            <button type="button" id="9" class="btn" (click)="addNumber(9)">9</button>
+          <button type="button" id="+" class="btn1" (click)="addOperator('+')">&#43;</button>
+          <button type="button" id="4" class="btn" (click)="addNumber(4)">4</button>
+          <button type="button" id="5" class="btn" (click)="addNumber(5)">5</button>
+          <button type="button" id="6" class="btn" (click)="addNumber(6)">6</button>
+          <button type="button" id="-" class="btn1" (click)="addOperator('-')">&#45;</button>
+          <button type="button" id="1" class="btn" (click)="addNumber(1)">1</button>
+          <button type="button" id="2" class="btn" (click)="addNumber(2)">2</button>
+          <button type="button" id="3" class="btn" (click)="addNumber(3)">3</button>
+          <button type="button" id="hide" class="btn">?</button>
+          <button type="button" id="zero" class="btn" (click)="addNumber(0)">0</button>
+          <button type="button" id="." class="btn" (click)="adddot('.')">.</button>
+            
+          <button type="button" id="equals" class="btn" (click)="calculate()">=</button>
+          <br>
+          <button type="button" id="prime" class="btn" (click)="addOperator('p') ">Prime</button>
+          <button type="button" id="factorial" class="btn" (click)="addOperator('!')">Factorial(!)</button>
+        </div>
+      </div>
+  </div>
+</div>
+  
+
+<div>
+  <mat-card class="my-card">
+
+    
+    <img mat-card-image src="https://i.ibb.co/jWvjby9/Capture.png" alt="Photo of Aryabhata">
+    
+    <mat-card-content>
+      <p>
+        Aryabhata or Aryabhata I was the first of the major mathematician-astronomers from the classical age of Indian mathematics and Indian astronomy.
+      </p>
+      <mat-icon svgIcon="thumbs-up" aria-hidden="false" aria-label="Example thumbs up SVG icon"></mat-icon>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+
+<div class="button">
+  <button mat-raised-button class="like">Like</button>
+  <button mat-raised-button class="comment">Comment</button>
+  <button mat-raised-button class="share">Share</button>
+</div>
+
+
+
